@@ -1,25 +1,26 @@
-<!doctype html>
-<html lang="en" ng-app="phonecatApp">
+<!DOCTYPE html>
+<html lang="pl" >
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Google Phone Gallery</title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="app.css" />
-    <link rel="stylesheet" href="app.animations.css" />
 
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-animate/angular-animate.js"></script>
     <script src="lib/angular-resource/angular-resource.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
-    
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="helloworld.js"></script>
   </head>
   <body>
-
-    <div class="view-container">
-      <div ng-view class="view-frame">
-View</div>
+    <div ng-app>
+      <div class="view-container">
+        <div ng-view class="view-frame">
+          View {{ 5+5 }}
+        </div>
+      </div>
     </div>
-
   </body>
 </html>
