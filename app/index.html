@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="pl" >
+<html lang="pl">
   <head>
     <meta charset="utf-8" />
     <title>Google Phone Gallery</title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="app.css" />
 
-    <script src="lib/jquery/dist/jquery.js"></script>
+    <!-- <script src="lib/jquery/dist/jquery.js"></script> -->
     <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-animate/angular-animate.js"></script>
-    <script src="lib/angular-resource/angular-resource.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
-    <script src="lib/angular-ui-router.js"></script>
-    <script src="helloworld.js"></script>
+    <!-- <script src="lib/angular-animate/angular-animate.js"></script> -->
+    <!-- <script src="lib/angular-resource/angular-resource.js"></script> -->
+    <!-- <script src="lib/angular-route/angular-route.js"></script> -->
+    <script src="lib/ui-router-angularjs.min.js"></script>
+    <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="helloWorld.js"></script>
   </head>
-  <body>
-    <div ng-app>
-      <div class="view-container">
+  <body ng-app>
+    <div >
+      <div class="view-container"  >
         <div ng-view class="view-frame">
+          
+          <a ui-sref="hello">Hello</a>
+          <a ui-sref="about">About</a>
+
+          <ui-view></ui-view>
           View {{ 5+5 }}
         </div>
       </div>
